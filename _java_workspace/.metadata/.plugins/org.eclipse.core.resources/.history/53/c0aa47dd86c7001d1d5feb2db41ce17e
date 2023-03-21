@@ -1,0 +1,29 @@
+package day18;
+
+class Bank{
+	//계좌의 돈
+	private int money = 10000;
+	
+	//입금
+	public void saveMoney(int save) {
+		int m = this.money;
+		
+		try {
+			Thread.sleep(3000); //3초
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	//출굼
+}
+
+public class SyncMain {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

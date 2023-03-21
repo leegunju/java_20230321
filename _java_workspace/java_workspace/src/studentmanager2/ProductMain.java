@@ -1,0 +1,53 @@
+package studentmanager2;
+
+import java.util.Scanner;
+
+public class ProductMain {
+
+	public static void main(String[] args) {
+
+		ProgramManager pm = new ProgramManager();
+
+		Scanner scan = new Scanner(System.in);
+
+		int menu = 0;
+
+		do {
+			System.out.println("-----Menu-----");
+			System.out.println("1. 학생 등록");
+			System.out.println("2. 학생 리스트 확인");
+			System.out.println("3. 학생 정보 검색");
+			System.out.println("4. 수강 신청");
+			System.out.println("5. 수강 철회");
+			System.out.println("6. 프로그램 종료");
+
+			menu = scan.nextInt();
+
+			switch (menu) {
+			case 1:
+				pm.StudentInsert(scan);
+				break;
+			case 2:
+				pm.StudentPrint();
+				break;
+			case 3:
+				pm.StuentSearch(scan);
+				break;
+			case 4:
+				pm.ProgramResister(scan);
+				break;
+			case 5:
+				pm.ProgramDelete(scan);
+				break;
+			case 6:
+				break;
+			default:
+				System.out.println("잘못된 메뉴입니다.");
+			}
+
+		} while (menu != 6);
+		System.out.println("프로그램 종료");
+		scan.close();
+	}
+
+}

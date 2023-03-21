@@ -1,0 +1,10 @@
+package day16;
+
+public class LambdaEx {
+
+	public static void main(String[] args) {
+		// Lambda expression : 람다식
+		// 함수형 프로그램(Functional Programming : FP)
+	}
+
+}

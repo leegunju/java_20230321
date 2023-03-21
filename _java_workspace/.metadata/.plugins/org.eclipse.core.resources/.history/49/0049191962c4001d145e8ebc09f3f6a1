@@ -1,0 +1,37 @@
+package day16;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class EnglishDictionary {
+
+}
+
+class Word{
+	//hello : 안녕, 아침인사, 반가움, 비슷한말 hi
+	private Map<String, ArrayList<String>> words = new HashMap<>();
+	Scanner scan = new Scanner(System.in);
+	/* y를 입력하면 단어를 입력, n을 입력하면 종료
+	 * 단어가 이미 있다면 '이미 있는 단어입니다.' 등록 금지
+	 * 메서드명 : makeWord
+	 */
+	public void makeWord() {
+		char is = 'y';
+		while(is == 'y') {
+			System.out.println("단어 입력:");
+			String word = scan.next();
+			
+			if(word.equals(words.keySet())){
+				
+			}
+			System.out.println("의미 입력:");
+			scan.nextLine();
+		}
+	}
+	
+	/* 단어 출력 메서드
+	 * 
+	 */
+}

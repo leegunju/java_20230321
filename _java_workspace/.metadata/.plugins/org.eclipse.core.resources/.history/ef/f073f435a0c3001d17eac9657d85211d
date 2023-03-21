@@ -1,0 +1,52 @@
+package studentmanager;
+
+import java.util.Scanner;
+
+public class StudentManager implements Program{
+	Student s = new Student();
+
+	@Override
+	public void printStudent() {
+		
+		
+	}
+
+	@Override
+	public void insertStudent(Scanner scan) {
+		System.out.println("학번을 입력하세요");
+		int hakbun = scan.nextInt();
+		s.setHakbun(hakbun);
+		System.out.println("이름을 입력하세요");
+		String studentName = scan.next();
+		s.setStudentName(studentName);
+		System.out.println("주민번호를 입력하세요");
+		String socialSecurityNumber = scan.next();
+		s.setSocialSecurityNumber(socialSecurityNumber);
+		System.out.println("학부를 입력하세요");
+		String hakbu = scan.next();
+		s.setHakbu(hakbu);
+		System.out.println("학과를 입력하세요");
+		String hakga = scan.next();
+		s.setHakga(hakga);
+		
+	}
+
+	@Override
+	public void searchStudent(Scanner scan) {
+		
+		
+	}
+
+	@Override
+	public void registerStudent(Scanner scan) {
+		
+		
+	}
+
+	@Override
+	public void deleteStudent(Scanner scan) {
+		
+		
+	}
+
+}

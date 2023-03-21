@@ -1,0 +1,16 @@
+package day15;
+
+public class WordManager {
+	
+	public void printMenu() {
+		System.out.println(">>단어장");
+		System.out.println("1.단어추가");
+		System.out.println("2.단어출력");
+		System.out.println("3.단어검색");
+		System.out.println("4.단어수정");
+		System.out.println("5.단어삭제");
+		System.out.println("6.종료");
+		System.out.println("--------");
+	}
+
+}

@@ -1,0 +1,11 @@
+package day15;
+
+public class BigDecimalEx {
+
+	public static void main(String[] args) {
+		// BigDecimal : java에서 숫자를 정밀하게 저장/표현하기 위한 클래스
+		// 돈, 소수점 정밀한 계산
+
+	}
+
+}

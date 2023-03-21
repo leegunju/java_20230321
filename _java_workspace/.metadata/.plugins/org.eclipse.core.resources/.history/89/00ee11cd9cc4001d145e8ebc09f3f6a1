@@ -1,0 +1,26 @@
+package day16;
+
+import java.util.ArrayList;
+
+public class CustomerMain {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Customer> list = new ArrayList<>();
+		list.add(new Customer("이순신", 40));
+		list.add(new Customer("신사임당", 35));
+		list.add(new Customer("이아들", 10));
+		
+		list.stream().forEach(s->{
+			String name = s.getName();
+			int age = s.getAge();
+			int price = s.getPrice();
+			System.out.println("이름:"+name+" 나이:"+age+" 비용:"+price);
+		});
+		
+		int sum = list.stream().mapToInt(n->n.getPrice()).sum();
+		System.out.println(sum);
+
+	}
+
+}

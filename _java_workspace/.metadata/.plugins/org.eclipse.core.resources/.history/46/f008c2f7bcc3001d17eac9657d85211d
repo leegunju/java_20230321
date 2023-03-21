@@ -1,0 +1,109 @@
+package studentmanager2;
+
+import java.util.ArrayList;
+
+public class Student {
+	
+	private String stdNum;
+	private String stdName;
+	private String registerNum;
+	private String faculty;
+	private String major;
+	private ArrayList<Subject> subject = new ArrayList<>();
+
+	
+	public Student() {
+	}
+
+	
+	public Student(String stdNum, String stdName, String registerNum, String faculty, String major) {
+		this.stdNum = stdNum;
+		this.stdName = stdName;
+		this.registerNum = registerNum;
+		this.faculty = faculty;
+		this.major = major;
+	}
+
+	
+	public void stdPrint() {
+		System.out.println("학생명(학번):" + stdName + "(" + stdNum + ")");
+		System.out.println("학부(학과):" + faculty + "(" + major + ")");
+	}
+
+	
+	public void subPrint() {
+		
+	}
+
+	
+	public void insertSubject(Subject subName) {
+		
+	}
+
+	
+	public void deleteSubject(String subName) {
+		
+
+	}
+
+
+	public String getStdNum() {
+		return stdNum;
+	}
+
+
+	public void setStdNum(String stdNum) {
+		this.stdNum = stdNum;
+	}
+
+
+	public String getStdName() {
+		return stdName;
+	}
+
+
+	public void setStdName(String stdName) {
+		this.stdName = stdName;
+	}
+
+
+	public String getRegisterNum() {
+		return registerNum;
+	}
+
+
+	public void setRegisterNum(String registerNum) {
+		this.registerNum = registerNum;
+	}
+
+
+	public String getFaculty() {
+		return faculty;
+	}
+
+
+	public void setFaculty(String faculty) {
+		this.faculty = faculty;
+	}
+
+
+	public String getMajor() {
+		return major;
+	}
+
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+
+	public ArrayList<Subject> getSubject() {
+		return subject;
+	}
+
+
+	public void setSubject(ArrayList<Subject> subject) {
+		this.subject = subject;
+	}
+
+}

@@ -1,0 +1,12 @@
+package day17;
+
+public class FileWriterEx01 {
+
+	public static void main(String[] args) {
+		/* 문자 기반 스트림
+		 * 
+		 */
+
+	}
+
+}

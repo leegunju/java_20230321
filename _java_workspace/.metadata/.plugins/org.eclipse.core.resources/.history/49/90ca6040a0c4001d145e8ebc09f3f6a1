@@ -1,0 +1,33 @@
+package day16;
+
+import java.util.ArrayList;
+
+public class CustomerMain {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Customer> list = new ArrayList<>();
+		list.add(new Customer("이순신", 40));
+		list.add(new Customer("신사임당", 35));
+		list.add(new Customer("이아들", 10));
+		
+		System.out.println("--고객명단--");
+		//list.stream().forEach(System.out::println);
+		list.stream().forEach(s->{
+			String name = s.getName();
+			int age = s.getAge();
+			int price = s.getPrice();
+			System.out.println("이름:"+name+" 나이:"+age+" 비용:"+price);
+		});
+		System.out.println("----------------");
+		
+		int sum = list.stream().mapToInt(n->n.getPrice()).sum();
+		System.out.println("총 여행비용: "+sum);
+		//20세 이상 성인만 이름을 정렬하여 출력
+		list.stream().filter(f->f.getAge() >= 20).map(n->n.getName()).sorted().forEach(f->{
+			System.out.println("20세 이상 성인:");
+		});
+
+	}
+
+}

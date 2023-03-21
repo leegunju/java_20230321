@@ -1,0 +1,58 @@
+package product;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ProductManager {
+	
+	private ArrayList<Product> menu = new ArrayList<>();
+	private ArrayList<Order> price = new ArrayList<>();
+	
+	public void addMenu() {
+		menu.add(new Product("햄버거", 15000));
+		menu.add(new Product("피자", 20000));
+		menu.add(new Product("음료", 2000));
+		menu.add(new Product("과자", 1000));
+		menu.add(new Product("사탕", 500));
+	}
+	
+	public void add(Scanner scan) {
+		System.out.println("추가할 메뉴를 입력하세요.");
+		String menu = scan.next();
+		System.out.println("메뉴의 가격을 입력하세요.");
+		int price = scan.nextInt();
+		this.menu.add(new Product(menu, price));
+		
+	}
+
+	public void printProduct() {
+		System.out.println("---menu---");
+		System.out.println("1.햄버거 : 15,000원");
+		System.out.println("2.피자 : 20,000원");
+		System.out.println("3.음료 : 2,000원");
+		System.out.println("4.과자 : 1,000원");
+		System.out.println("5.사탕 : 500원");
+		System.out.println("메뉴 선택 : ");
+		
+	}
+	
+	public void orderPick(String name, int count) {
+		for(int i=0; i<menu.size(); i++) {
+			if(menu.get(i).getMenu().equals(name)) {
+				int price = menu.get(i).getPrice();
+				Order order = new Order();
+				order.setMenu(name);
+				order.setPrice(price);
+				order.setCount(count);
+				order.setTotal(price*count);
+				this.price.add(order);
+			}
+		}
+	}
+
+	public void printOrder() {
+		
+		
+	}
+
+}

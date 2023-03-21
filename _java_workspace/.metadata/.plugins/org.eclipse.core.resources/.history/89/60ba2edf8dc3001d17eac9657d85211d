@@ -1,0 +1,48 @@
+package product;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		ProductManager pm = new ProductManager();
+		int flag;
+		do {
+			System.out.println("---menu---");
+			System.out.println("1.제품추가");
+			System.out.println("2.제품리스트보기");
+			System.out.println("3.제품주문");
+			System.out.println("4.주문내역");
+			System.out.println("5.프로그램 종료");
+			System.out.println("메뉴 선택 : ");
+			flag = scan.nextInt();
+			
+			switch(flag) {
+			case 1:
+				pm.add(scan);
+				break;
+			case 2:
+				pm.printProduct();
+				break;
+			case 3:
+				System.out.println("이름 : ");
+				String menu = scan.next();
+				System.out.println("수량 : ");
+				int count = scan.nextInt();
+				pm.orderPick(menu, count);
+				break;
+			case 4:
+				pm.printOrder();
+				break;
+			default:
+				System.out.println("1~5사이의 숫자를 입력하세요");
+			}
+			
+		} while (flag != 5);
+		System.out.println("프로그램 종료");
+
+	}
+
+}

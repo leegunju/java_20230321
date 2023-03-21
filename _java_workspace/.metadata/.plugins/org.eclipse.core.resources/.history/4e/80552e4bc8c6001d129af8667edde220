@@ -1,0 +1,12 @@
+package day17;
+
+public class BufferedReaderEx01 {
+
+	public static void main(String[] args) {
+		/*
+		 * bufferedReader : 보조 스트림
+		 */
+
+	}
+
+}

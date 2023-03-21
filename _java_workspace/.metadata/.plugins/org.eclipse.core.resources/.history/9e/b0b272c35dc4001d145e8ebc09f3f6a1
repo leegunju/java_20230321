@@ -1,0 +1,14 @@
+package day16;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class EnglishDictionary {
+
+}
+
+class Word{
+	//hello : 안녕, 아침인사, 반가움, 비슷한말 hi
+	private Map<String, ArrayList<String>> map = new HashMap<>();
+}

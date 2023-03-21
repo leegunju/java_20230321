@@ -1,0 +1,121 @@
+package studentmanager2;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Student {
+
+	private String stucode;
+	private String stuname;
+	private String resinum;
+	private String faculty;
+	private String major;
+	private ArrayList<Subject> Subject = new ArrayList<>();
+
+	public Student() {
+	}
+
+	public Student(String stuname) {
+		this.stuname = stuname;
+	}
+
+	public Student(ArrayList<studentmanager.Subject> subject) {
+		Subject = subject;
+	}
+
+	public Student(String stucode, String stuname, String resinum, String faculty, String major) {
+		this.stucode = stucode;
+		this.stuname = stuname;
+		this.resinum = resinum;
+		this.faculty = faculty;
+		this.major = major;
+	}
+
+	public Student(String stucode, String stuname, String resinum, String faculty, String major,
+			ArrayList<Subject> subject) {
+		this.stucode = stucode;
+		this.stuname = stuname;
+		this.resinum = resinum;
+		this.faculty = faculty;
+		this.major = major;
+		this.Subject = subject;
+	}
+
+	// 학생 정보 출력
+	public void stuPrint() {
+		System.out.println("학생명(학번) :" + stuname + "(" + stucode + ")");
+		System.out.println("학부(학과) :" + faculty + "(" + major + ")");
+	}
+
+	// 수강과목 출력
+	public void subPrint() {
+		for (int i = 0; i < Subject.size(); i++) {
+			System.out.println(Subject.get(i).getSubname());
+		}
+	}
+
+	// 수강과목 추가
+	public void ProgramResister(Scanner scan) {
+		System.out.println("수강과목 추가");
+		System.out.println("수강과목 이름>>");
+		String subname = scan.next();
+		Subject.add(new Subject(subname));
+	}
+
+	// 수강과목 삭제
+	public void deleteSubject(Scanner scan) {
+		System.out.println("철회할 과목 입력");
+		String subName = scan.next();
+		for (int i = 0; i < Subject.size(); i++) {
+			Subject.remove(Subject.get(i));
+		}
+	}
+
+	public String getStucode() {
+		return stucode;
+	}
+
+	public void setStucode(String stucode) {
+		this.stucode = stucode;
+	}
+
+	public String getStuname() {
+		return stuname;
+	}
+
+	public void setStuname(String stuname) {
+		this.stuname = stuname;
+	}
+
+	public String getResinum() {
+		return resinum;
+	}
+
+	public void setResinum(String resinum) {
+		this.resinum = resinum;
+	}
+
+	public String getFaculty() {
+		return faculty;
+	}
+
+	public void setFaculty(String faculty) {
+		this.faculty = faculty;
+	}
+
+	public String getMajor() {
+		return major;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	public ArrayList<Subject> getSubject() {
+		return Subject;
+	}
+
+	public void setSubject(ArrayList<Subject> subject) {
+		Subject = subject;
+	}
+}

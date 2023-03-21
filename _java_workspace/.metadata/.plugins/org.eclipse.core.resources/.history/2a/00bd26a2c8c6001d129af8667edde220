@@ -1,0 +1,14 @@
+package day17;
+
+public class BufferedReaderEx01 {
+
+	public static void main(String[] args) {
+		/*
+		 * bufferedReader : 문자 보조 스트림
+		 * 라인단위로 읽기가 가능
+		 * 더이상 읽을 라인이 없을경우 null을 리턴
+		 */
+
+	}
+
+}

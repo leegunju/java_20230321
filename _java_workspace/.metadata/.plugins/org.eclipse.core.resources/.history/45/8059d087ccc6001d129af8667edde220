@@ -1,0 +1,11 @@
+package day17;
+
+public class FileObjectEx01 {
+
+	public static void main(String[] args) {
+		// 파일이 가지고 있는 정보를 출력.
+		
+
+	}
+
+}
